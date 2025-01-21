@@ -1,3 +1,28 @@
+// Color variables
+$blue: #106EEA;
+$orange: #F47820;
+$purple: #762E92;
+$gray-300: #333333;
+$white: #FFFFFF;
+
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
 body {
-    background: red;
+    // background: var(--gray-900);
+    // color: var(--gray-300);
+    -webkit-font-smoothing: antialiased;
+}
+
+body,
+input,
+textarea,
+button {
+    font-family: "Urbanist", serif;
+    font-weight: 400;
+    font-size: 1rem;
 }
