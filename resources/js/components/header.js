@@ -15,11 +15,9 @@ $(window).on('load', function () {
 })
 
 function showMenuMobile(menuMobileElement) {
-    console.log(menuMobileElement)
     menuMobileElement.addClass('visible');
 }
 
 function hideMenuMobile(menuMobileElement) {
-    console.log(menuMobileElement)
     menuMobileElement.removeClass('visible');
 }

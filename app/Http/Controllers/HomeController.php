@@ -2,18 +2,20 @@
 
 namespace App\Http\Controllers;
 
+use App\Models\Banner;
 use App\Models\CompanyLink;
 use App\Models\CompanySocialMedia;
 use Illuminate\Http\Request;
 
-class HomeController
+class HomeController extends GeneralController
 {
     public function __invoke()
     {
-        
+        $bannerTop = $this->getBanner('Banner Top');
         return view('pages.home', [
             'companyLinks' => CompanyLink::all(),
             'companySocialMedia' => CompanySocialMedia::all(),
+            'bannerTop' => $bannerTop,
         ]);
     }
 }

@@ -17,6 +17,15 @@
     </head>
     <body>
         <x-header :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia" />
+        
+        <section class="banner-top">
+            <img src={{$bannerTop->image_url}} alt={{$bannerTop->image_alt}} title={{$bannerTop->image_title}}>
+
+            <div class="banner-top__container">
+                <x-svg.logo-white />
+                <p>{{$bannerTop->title}}</p>
+            </div>
+        </section>
 
         <x-footer :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia" />
     </body>
