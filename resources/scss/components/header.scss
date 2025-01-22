@@ -155,7 +155,7 @@ header {
         $menuMobileWidth: 25rem;
         position: fixed;
         top: 0;
-        right: calc($menuMobileWidth * -1);
+        right: calc($menuMobileWidth * -1.5);
         height: 100vh;
         width: $menuMobileWidth;
 

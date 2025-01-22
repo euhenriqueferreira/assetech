@@ -16,6 +16,8 @@
         @vite(['resources/scss/pages/home.scss', 'resources/js/app.js'])
     </head>
     <body>
-        <x-header :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia"></x-header>
+        <x-header :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia" />
+
+        <x-footer :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia" />
     </body>
 </html>
