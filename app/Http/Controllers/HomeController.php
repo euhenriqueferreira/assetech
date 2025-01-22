@@ -12,10 +12,13 @@ class HomeController extends GeneralController
     public function __invoke()
     {
         $bannerTop = $this->getBanner('Banner Top');
+        $bannersServices = $this->getBanner('Banner Services', true);
+        
         return view('pages.home', [
             'companyLinks' => CompanyLink::all(),
             'companySocialMedia' => CompanySocialMedia::all(),
             'bannerTop' => $bannerTop,
+            'bannersServices' => $bannersServices,
         ]);
     }
 }

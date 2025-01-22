@@ -8,7 +8,10 @@ use Illuminate\Routing\Controller;
 
 class GeneralController extends Controller
 {
-    public function getBanner($bannerName){
+    public function getBanner($bannerName, $bannerGroup = false){
+        if($bannerGroup){
+            return Banner::query()->where('group', '=', $bannerName)->get();
+        }
         return Banner::query()->where('name', '=', $bannerName)->first();
     }
 }
