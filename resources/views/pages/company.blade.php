@@ -29,7 +29,6 @@
                 @endforeach
             </section>
         @endif
-
         
         {{-- Info Icons --}}
         <x-info-icons />
@@ -48,6 +47,24 @@
                     <div class="paragraph">
                         <p>{{ $ourMission->content }}</p>
                     </div>
+                </div>
+            </section>
+        @endif
+
+        @if($ourHistory)
+            <section class="our-history">
+                <img src="{{ $ourHistory->image_url }}" alt="{{ $ourHistory->image_alt }}" title="{{ $ourHistory->image_title }}">
+                <div class="caption">
+                    <p class="default_subtitle">Sobre nós</p>
+                    <h2 class="default_title">{{ $ourHistory->title }}</h2>
+                    <div class="paragraph">
+                        <p>{{ $ourHistory->content }}</p>
+                    </div>
+                </div>
+                <div class="screws">
+                    @for ($i = 0; $i < 4; $i++)
+                        <x-svg.screw />
+                    @endfor
                 </div>
             </section>
         @endif

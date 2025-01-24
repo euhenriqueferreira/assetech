@@ -15,6 +15,7 @@ class CompanyController extends GeneralController
         $ourResume = explode('<br/>', $ourResumeWithoutFormat->content);
 
         $ourMission = $this->getArticle('Article Our Mission Company');
+        $ourHistory = $this->getBanner('Banner Our History');
 
         return view('pages.company', [
             'companyLinks' => CompanyLink::all(),
@@ -22,6 +23,7 @@ class CompanyController extends GeneralController
             'testimonials' => $testimonials,
             'ourResume' => $ourResume,
             'ourMission' => $ourMission,
+            'ourHistory' => $ourHistory,
         ]);
     }
 }
