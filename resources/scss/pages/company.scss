@@ -45,12 +45,58 @@
     }
 }
 
+// Our Mission
+.our-mission {
+    background: $blue;
+    padding: 2.5rem 0 5rem 0;
+    margin-bottom: 4rem;
+
+    &__wrapper {
+        width: 100%;
+        max-width: 1280px;
+        margin: 0 auto;
+
+        h2 {
+            color: $white;
+
+            &::before,
+            &::after {
+                content: '';
+                display: block;
+                height: 3px;
+                width: 3rem;
+                background: $orange;
+            }
+        }
+
+        .paragraph {
+            margin-top: 2.25rem;
+
+            p {
+                height: 15rem;
+                overflow: auto;
+                padding-right: 1rem;
+
+                font-size: 1.25rem;
+                line-height: 1.6;
+                color: $white;
+                font-weight: 400;
+                text-align: justify;
+            }
+        }
+    }
+}
+
 // Media Queries
 
 @media screen and (max-width: 1280px) {
     .our-resume {
         width: calc(100% - 2rem);
         margin: 2.25rem 1rem 4rem 1rem;
+    }
+
+    .our-mission {
+        padding: 2.5rem 1rem 5rem 1rem;
     }
 }
 
@@ -62,21 +108,40 @@
             font-size: 1.125rem;
         }
     }
+
+    .our-mission {
+        .paragraph {
+            p {
+                font-size: 1.125rem;
+            }
+        }
+    }
 }
 
 @media screen and (max-width: 767px) {
     .our-resume {
         margin: 2rem auto 3.75rem auto;
     }
+
+    .our-mission {
+        padding: 2rem 1rem 3.75rem 1rem;
+    }
 }
 
 @media screen and (max-width: 575px) {
     .our-resume {
         height: 27rem;
-        margin: 2rem auto 3.75rem auto;
 
         p {
             font-size: 1rem;
+        }
+    }
+
+    .our-mission {
+        .paragraph {
+            p {
+                font-size: 1rem;
+            }
         }
     }
 }
