@@ -15,10 +15,10 @@ return new class extends Migration
             $table->id();
             $table->string('name');
             $table->string('title');
-            $table->string('subtitle');
-            $table->string('content')->nullable();
-            $table->string('group')->nullable();
-            $table->string('image_url');
+            $table->string('subtitle')->nullable();
+            $table->string('content');
+            $table->string('group_')->nullable();
+            $table->string('image_url')->nullable();
             $table->string('image_alt')->nullable();
             $table->string('image_title')->nullable();
             $table->timestamps();

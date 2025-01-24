@@ -12,14 +12,14 @@ class GeneralController extends Controller
 {
     public function getBanner($bannerName, $bannerGroup = false){
         if($bannerGroup){
-            return Banner::query()->where('group', '=', $bannerName)->get();
+            return Banner::query()->where('name', '=', $bannerName)->get();
         }
         return Banner::query()->where('name', '=', $bannerName)->first();
     }
 
     public function getArticle($articleName, $articleGroup = false){
         if($articleGroup){
-            return Article::query()->where('group', '=', $articleName)->get();
+            return Article::query()->where('name', '=', $articleName)->get();
         }
         return Article::query()->where('name', '=', $articleName)->first();
     }
