@@ -73,38 +73,6 @@
     flex-direction: column;
     align-items: center;
 
-    p.subtitle {
-        padding: 0 1rem;
-        text-align: center;
-        font-size: 1rem;
-        color: $orange;
-        font-weight: 600;
-        text-transform: uppercase;
-    }
-
-    h2.title {
-        padding: 0 1rem;
-        margin-top: 0.75rem;
-        font-size: 2.5rem;
-        line-height: 1;
-        font-weight: 500;
-
-        display: flex;
-        align-items: center;
-        justify-content: center;
-        gap: 0.75rem;
-        text-align: center;
-
-        &::before,
-        &::after {
-            content: '';
-            display: block;
-            height: 3px;
-            width: 3rem;
-            background: $purple;
-        }
-    }
-
     ul {
         width: 100%;
         margin-top: 1.5rem;
@@ -190,47 +158,110 @@
     }
 }
 
+// Testimonials
+.testimonials {
+    margin: 0 auto;
+    max-width: 1440px;
+    margin-top: 3.5rem;
+    margin-bottom: 5.25rem;
+    padding: 0 1rem;
 
-// Media Queries
+    ul {
+        margin-top: 2.5rem;
+        padding-bottom: 2.5rem;
 
-@media screen and (max-width:1280px) {
+        li {
+            padding: 1.5rem;
+            border: 3px solid $blue;
 
-    // Our services
-    .our-services {
-        h2.title {
-            font-size: 2.25rem;
-        }
-    }
-}
+            div.content {
+                display: flex;
+                justify-content: center;
+                align-items: stretch;
+                gap: 0.75rem;
 
-@media screen and (max-width:1199px) {
+                div {
+                    svg {
+                        width: auto;
+                        height: 1.875rem;
+                        color: $blue;
+                        line-height: 0;
+                    }
 
-    // Our services
-    .our-services {
-        h2.title {
-            font-size: 2rem;
+                    &:first-child {
+                        margin-top: -0.5rem;
+                    }
 
-            &::before,
-            &::after {
-                display: none;
+                    &:last-child {
+                        display: flex;
+                        align-items: flex-end;
+                        margin-bottom: -0.5rem;
+                    }
+                }
+
+                p {
+                    display: -webkit-box;
+                    -webkit-box-orient: vertical;
+                    -webkit-line-clamp: 5;
+                    overflow: hidden;
+                    text-overflow: ellipsis;
+                    width: 75%;
+                }
+            }
+
+            footer {
+                margin-top: 0.75rem;
+                padding: 0;
+                background: transparent;
+                display: flex;
+                flex-direction: row;
+                align-items: center;
+                gap: 0.5rem;
+
+                img {
+                    width: 2.5rem;
+                    aspect-ratio: 2 / 2;
+                    border-radius: 50%;
+                }
+
+                p,
+                span {
+                    font-size: 0.875rem;
+                    color: $gray-300;
+                    font-weight: 500;
+                }
+
+                span {
+                    text-decoration: underline;
+                    font-style: italic;
+                }
             }
         }
+
+        .swiper-pagination {
+            bottom: 0.5rem;
+        }
     }
 }
+
+// Media Queries
+@media screen and (max-width:991px) {
+
+    // Testimonials
+    .testimonials {
+        // margin: 0 auto;
+        // max-width: 1440px;
+        margin-top: 3rem;
+        margin-bottom: 4.5rem;
+        // padding: 0 1rem;
+    }
+}
+
 
 @media screen and (max-width:767px) {
 
     // Our services
     .our-services {
-        h2.title {
-            font-size: 2rem;
-
-            &::before,
-            &::after {
-                width: 2rem;
-            }
-        }
-
         ul {
             li {
                 h3 {
@@ -240,6 +271,14 @@
         }
     }
 
+    // Testimonials
+    .testimonials {
+        // margin: 0 auto;
+        // max-width: 1440px;
+        margin-top: 2.5rem;
+        margin-bottom: 3rem;
+        // padding: 0 1rem;
+    }
 }
 
 
@@ -257,18 +296,6 @@
             p {
                 font-size: 1.4rem;
             }
-        }
-    }
-
-    // Our services
-    .our-services {
-        p.subtitle {
-            font-size: 0.9rem;
-        }
-
-        h2.title {
-            margin-top: 0.5rem;
-            font-size: 1.8rem;
         }
     }
 }

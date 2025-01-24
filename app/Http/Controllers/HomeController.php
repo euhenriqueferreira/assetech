@@ -13,12 +13,14 @@ class HomeController extends GeneralController
     {
         $bannerTop = $this->getBanner('Banner Top');
         $bannersServices = $this->getBanner('Banner Services', true);
-        
+        $testimonials = $this->getTestimonials();
+
         return view('pages.home', [
             'companyLinks' => CompanyLink::all(),
             'companySocialMedia' => CompanySocialMedia::all(),
             'bannerTop' => $bannerTop,
             'bannersServices' => $bannersServices,
+            'testimonials' => $testimonials,
         ]);
     }
 }
