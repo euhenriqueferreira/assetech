@@ -19,7 +19,7 @@
     </div>
 
     <nav>
-        <a href="" class="logo">
+        <a href="{{ route('pages.home') }}" class="logo">
             <x-svg.logo />
         </a>
         
@@ -30,7 +30,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ route('pages.company') }}">
                     <span>Sobre</span>
                 </a>
             </li>

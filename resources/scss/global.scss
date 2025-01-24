@@ -50,7 +50,7 @@ p.default_subtitle {
     text-transform: uppercase;
 }
 
-h2.default_title {
+.default_title {
     padding: 0 1rem;
     margin-top: 0.75rem;
     font-size: 2.5rem;
@@ -65,13 +65,13 @@ h2.default_title {
 }
 
 @media screen and (max-width:1280px) {
-    h2.default_title {
+    .default_title {
         font-size: 2.25rem;
     }
 }
 
 @media screen and (max-width:1199px) {
-    h2.default_title {
+    .default_title {
         font-size: 2rem;
 
         &::before,
@@ -82,7 +82,7 @@ h2.default_title {
 }
 
 @media screen and (max-width:767px) {
-    h2.default_title {
+    .default_title {
         font-size: 2rem;
 
         &::before,
@@ -98,7 +98,7 @@ h2.default_title {
         font-size: 0.9rem;
     }
 
-    h2.default_title {
+    .default_title {
         margin-top: 0.5rem;
         font-size: 1.8rem;
     }

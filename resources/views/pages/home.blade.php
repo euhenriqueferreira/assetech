@@ -8,10 +8,6 @@
 
         <title>Assetech</title>
 
-        <!-- Fonts -->
-        <link rel="preconnect" href="https://fonts.bunny.net">
-        <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
-
         <!-- Styles / Scripts -->
         @vite(['resources/scss/pages/home.scss', 'resources/js/pages/home.js'])
     </head>
@@ -56,60 +52,11 @@
         @endif
 
         {{-- Info Icons --}}
-        <section class="info-icons">
-            <ul class="info-icons__wrapper swiper">
-                <div class="swiper-wrapper">
-                    <li class="swiper-slide">
-                        <i class="fa-solid fa-circle-check"></i>
-                        <p>Qualidade certificada</p>
-                    </li>
-                    <li class="swiper-slide">
-                        <i class="fa-solid fa-gear"></i>
-                        <p>Serviços sob medida</p>
-                    </li>
-                    <li class="swiper-slide">
-                        <i class="fa-solid fa-user-graduate"></i>
-                        <p>Profissionais altamente capacitados</p>
-                    </li>
-                    <li class="swiper-slide">
-                        <i class="fa-solid fa-comments"></i>
-                        <p>Foco na construção de relações sólidas</p>
-                    </li>
-                </div>
-
-                <div class="swiper-pagination"></div>
-            </ul>
-        </section>
+        <x-info-icons />
 
         {{-- Testimonials --}}
         @if($testimonials)
-            <section class="testimonials">
-                <p class="default_subtitle">Nossos clientes</p>
-                <h2 class="default_title"> O que Nossos Clientes Dizem sobre Nós</h2>
-
-                <ul class="swiper">
-                    <div class="swiper-wrapper">
-                        @foreach ($testimonials as $testimonial)
-                            <li class="swiper-slide">
-                                <div class="content">
-                                    <div><x-svg.quote-left /></div>
-                                    <p>{{ $testimonial->content }}</p>
-                                    <div><x-svg.quote-right /></div>
-                                </div>
-                            <footer>
-                                    <img src={{$testimonial->author_photo}} alt={{ $testimonial->author_name}} title={{ $testimonial->author_name}} />
-                                    <div>
-                                        <p>{{ $testimonial->author_name }}</p>
-                                        <span>{{ $testimonial->author_title }}</span>
-                                    </div>
-                            </footer>
-                            </li>
-                        @endforeach
-                    </div>
-                
-                    <div class="swiper-pagination"></div>
-                </ul>
-            </section>
+            <x-testimonials :testimonials="$testimonials" />
         @endif
 
         {{-- Our History --}}
