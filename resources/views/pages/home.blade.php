@@ -80,6 +80,37 @@
             </ul>
         </section>
 
+        {{-- Our History --}}
+        @if($articleOurHistory)
+            <section class="our-history">
+                <ul class="swiper">
+                    <div class="swiper-wrapper">
+                        <li class="swiper-slide">
+                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
+                        </li>
+                        <li class="swiper-slide">
+                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
+                        </li>
+                    </div>
+
+                    <div class="swiper-button-prev"></div>
+                    <div class="swiper-button-next"></div>
+                </ul>
+                <div class="caption">
+                    <span class="default_subtitle">{{ $articleOurHistory->subtitle }}</span>
+                    <h2 class="default_title">{{ $articleOurHistory->title }}</h2>
+                    <p>{{ $articleOurHistory->content }}</p>
+                    <a href="">Ver mais sobre nós</a>
+                </div>
+            </section>
+        @endif
+
         <x-footer :companyLinks="$companyLinks" :companySocialMedia="$companySocialMedia" />
     </body>
 </html>

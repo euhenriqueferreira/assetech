@@ -13,6 +13,7 @@ class HomeController extends GeneralController
     {
         $bannerTop = $this->getBanner('Banner Top');
         $bannersServices = $this->getBanner('Banner Services', true);
+        $articleOurHistory = $this->getArticle('Article Our History Home');
         $testimonials = $this->getTestimonials();
 
         return view('pages.home', [
@@ -21,6 +22,7 @@ class HomeController extends GeneralController
             'bannerTop' => $bannerTop,
             'bannersServices' => $bannersServices,
             'testimonials' => $testimonials,
+            'articleOurHistory' => $articleOurHistory,
         ]);
     }
 }

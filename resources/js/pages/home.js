@@ -66,6 +66,40 @@ const testimonials = new Swiper('.testimonials ul.swiper', {
     },
 });
 
+
+const ourHistory = new Swiper('.our-history ul.swiper', {
+    modules: [Navigation, Pagination, Autoplay],
+
+    slidesPerView: 1,
+    spaceBetween: 20,
+    direction: 'horizontal',
+    loop: false,
+    autoplay: {
+        delay: 3000,
+    },
+
+    breakpoints: {
+        1199: {
+            slidesPerView: 1,
+            spaceBetween: 20,
+        },
+        575: {
+            slidesPerView: 2,
+            spaceBetween: 20,
+        },
+        // 767: {
+        //     slidesPerView: 2,
+        //     spaceBetween: 20,
+        // },
+    },
+
+
+    navigation: {
+        nextEl: '.swiper-button-next',
+        prevEl: '.swiper-button-prev',
+    },
+});
+
 // $(document).on('load', function () {
 //     $('body').on('click', function (event) {
 //         console.log(event.target)

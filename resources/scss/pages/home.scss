@@ -73,6 +73,18 @@
     flex-direction: column;
     align-items: center;
 
+    h2 {
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 3rem;
+            background: $purple;
+        }
+    }
+
     ul {
         width: 100%;
         margin-top: 1.5rem;
@@ -147,14 +159,6 @@
                 }
             }
         }
-
-        .swiper-button-prev,
-        .swiper-button-next {
-            &::after {
-                font-size: 2rem;
-                color: $gray-100;
-            }
-        }
     }
 }
 
@@ -165,6 +169,19 @@
     margin-top: 3.5rem;
     margin-bottom: 5.25rem;
     padding: 0 1rem;
+
+
+    h2 {
+
+        &::before,
+        &::after {
+            content: '';
+            display: block;
+            height: 3px;
+            width: 3rem;
+            background: $purple;
+        }
+    }
 
     ul {
         margin-top: 2.5rem;
@@ -244,16 +261,134 @@
     }
 }
 
+// Our History
+.our-history {
+    width: 100%;
+    max-width: 1280px;
+    margin: 0 auto;
+    display: flex;
+    align-items: center;
+    gap: 2.25rem;
+    padding: 0 1rem;
+    margin-bottom: 3.75rem;
+
+    ul.swiper {
+        width: 28rem;
+        aspect-ratio: 3 / 2;
+
+        li {
+            width: 100%;
+            height: 100%;
+
+            img {
+                width: 100%;
+                height: 100%;
+                object-fit: cover;
+            }
+        }
+    }
+
+    .caption {
+        flex: 1;
+
+        span {
+            font-size: 0.875rem;
+            text-transform: uppercase;
+            color: $orange;
+            font-weight: 700;
+        }
+
+        h2 {
+            justify-content: flex-start;
+            padding: 0;
+            font-size: 2.25rem;
+            color: $gray-300;
+            font-weight: 500;
+        }
+
+        p {
+            margin-top: 0.5rem;
+            font-size: 1.125rem;
+            line-height: 1.6;
+            color: $gray-300;
+            text-align: justify;
+            font-weight: 400;
+        }
+
+        a {
+            margin-top: 0.5rem;
+            display: block;
+            width: fit-content;
+            background: $orange;
+            font-size: 1.25rem;
+            padding: 0.8rem 1.75rem;
+            color: $white;
+            text-decoration: none;
+            transition: filter .2s;
+
+            &:hover {
+                filter: brightness(1.1);
+            }
+        }
+    }
+}
+
 // Media Queries
+@media screen and (max-width:1280px) {
+
+    // Our History
+    .our-history {
+        .caption {
+            h2 {
+                font-size: 2.1rem;
+            }
+
+            p {
+                font-size: 1.05rem;
+            }
+
+            a {
+                font-size: 1.125rem;
+            }
+        }
+    }
+}
+
+@media screen and (max-width:1199px) {
+
+    // Our History
+    .our-history {
+        max-width: 900px;
+        flex-direction: column;
+        margin-bottom: 3.5rem;
+
+        ul.swiper {
+            width: 100%;
+            height: 21rem;
+        }
+
+        .caption {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+
+            h2 {
+                justify-content: center;
+            }
+
+            p {
+                text-align: center;
+            }
+        }
+    }
+}
+
 @media screen and (max-width:991px) {
 
     // Testimonials
     .testimonials {
-        // margin: 0 auto;
-        // max-width: 1440px;
         margin-top: 3rem;
         margin-bottom: 4.5rem;
-        // padding: 0 1rem;
     }
 }
 
@@ -273,11 +408,24 @@
 
     // Testimonials
     .testimonials {
-        // margin: 0 auto;
-        // max-width: 1440px;
         margin-top: 2.5rem;
         margin-bottom: 3rem;
-        // padding: 0 1rem;
+    }
+
+    // Our History
+    .our-history {
+        gap: 2rem;
+        margin-bottom: 3rem;
+
+        ul.swiper {
+            height: 16rem;
+        }
+
+        .caption {
+            h2 {
+                font-size: 2rem;
+            }
+        }
     }
 }
 
@@ -295,6 +443,18 @@
 
             p {
                 font-size: 1.4rem;
+            }
+        }
+    }
+
+    // Our History
+    .our-history {
+        gap: 1.8rem;
+        margin-bottom: 2.5rem;
+
+        .caption {
+            h2 {
+                font-size: 1.9rem;
             }
         }
     }
