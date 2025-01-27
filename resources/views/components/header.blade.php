@@ -40,12 +40,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
-                    <span>Equipamentos</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
+                <a href="{{ route('pages.contact') }}">
                     <span>Contato</span>
                 </a>
             </li>
@@ -78,13 +73,13 @@
         <nav>
             <ul>
                 <li>
-                    <a href="">
+                    <a href="{{ route('pages.home') }}">
                         <span>Home</span>
                         <x-svg.chevron-right />
                     </a>
                 </li>
                 <li>
-                    <a href="">
+                    <a href="{{ route('pages.company') }}">
                         <span>Sobre</span>
                         <x-svg.chevron-right />
                     </a>
@@ -96,13 +91,7 @@
                     </a>
                 </li>
                 <li>
-                    <a href="">
-                        <span>Equipamentos</span>
-                        <x-svg.chevron-right />
-                    </a>
-                </li>
-                <li>
-                    <a href="">
+                    <a href="{{ route('pages.contact') }}">
                         <span>Contato</span>
                         <x-svg.chevron-right />
                     </a>

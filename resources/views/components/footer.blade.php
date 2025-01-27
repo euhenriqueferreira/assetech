@@ -15,7 +15,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
+                <a href="{{ route('pages.company') }}">
                     <span>Sobre</span>
                 </a>
             </li>
@@ -25,12 +25,7 @@
                 </a>
             </li>
             <li>
-                <a href="">
-                    <span>Equipamentos</span>
-                </a>
-            </li>
-            <li>
-                <a href="">
+                <a href="{{ route('pages.contact') }}">
                     <span>Contato</span>
                 </a>
             </li>

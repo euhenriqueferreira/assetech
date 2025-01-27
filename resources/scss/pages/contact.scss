@@ -1,0 +1,36 @@
+@use '../global.scss' as *;
+
+@import '../components/forms.scss';
+
+.contact-form {
+    margin: 3.75rem 0 0 0;
+    padding: 2.5rem 1rem;
+    background: $blue;
+
+    h1 {
+        color: $white;
+
+        &::before,
+        &::after {
+            background: $orange;
+        }
+    }
+
+    form {
+        width: 100%;
+        max-width: 41rem;
+        margin: 0 auto;
+        margin-top: 2.5rem;
+        display: flex;
+        flex-wrap: wrap;
+        justify-content: space-between;
+        gap: 1.5rem 0;
+    }
+}
+
+
+.container-google-maps {
+    iframe {
+        height: 20rem;
+    }
+}

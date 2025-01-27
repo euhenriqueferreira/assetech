@@ -67,15 +67,6 @@
                         <li class="swiper-slide">
                             <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
                         </li>
-                        <li class="swiper-slide">
-                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
-                        </li>
-                        <li class="swiper-slide">
-                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
-                        </li>
-                        <li class="swiper-slide">
-                            <img src="{{ $articleOurHistory->image_url }}" alt="{{ $articleOurHistory->image_alt }}" title="{{ $articleOurHistory->image_title }}" loading="lazy" >
-                        </li>
                     </div>
 
                     <div class="swiper-button-prev"></div>
@@ -85,7 +76,7 @@
                     <span class="default_subtitle">{{ $articleOurHistory->subtitle }}</span>
                     <h2 class="default_title">{{ $articleOurHistory->title }}</h2>
                     <p>{{ $articleOurHistory->content }}</p>
-                    <a href="">Ver mais sobre nós</a>
+                    <a href="{{ route('pages.company') }}">Ver mais sobre nós</a>
                 </div>
             </section>
         @endif

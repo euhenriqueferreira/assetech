@@ -10,6 +10,11 @@
 
     h1 {
         color: $gray-300;
+
+        &::before,
+        &::after {
+            display: none;
+        }
     }
 }
 
@@ -19,7 +24,7 @@
     height: auto;
     min-height: 320px;
     aspect-ratio: 3 / 1;
-    background-image: url('../../../public/storage/images/foto-parallax.jpg');
+    background-image: url('../../../public/storage/images/foto-banner-topo.png');
     background-size: cover;
     background-position: center;
     background-attachment: fixed;
@@ -118,6 +123,11 @@
             justify-content: flex-start;
             padding: 0;
             color: $white;
+
+            &::before,
+            &::after {
+                display: none;
+            }
         }
 
         .paragraph {
