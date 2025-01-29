@@ -1,0 +1,65 @@
+@use '../global.scss' as *;
+
+@import "../components/testimonials.scss";
+
+.grid-services {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+
+    margin-top: 3.5rem;
+    padding: 0 1rem;
+
+    ul {
+        margin-top: 2rem;
+        display: grid;
+        grid-template-columns: repeat(2, auto);
+        gap: 1.5rem;
+
+        li {
+            padding: 1rem;
+            border: 3px solid $blue;
+
+            h2 {
+                font-size: 1.5rem;
+                color: $gray-300;
+                font-weight: 600;
+                margin-bottom: 0.5rem;
+            }
+
+            p {
+                font-size: 1rem;
+                line-height: 1.4;
+                text-align: justify;
+            }
+        }
+    }
+}
+
+@media screen and (max-width: 1199px) {
+    .grid-services {
+        ul {
+            gap: 1rem;
+        }
+    }
+}
+
+@media screen and (max-width: 991px) {
+    .grid-services {
+        ul {
+            grid-template-columns: 1fr;
+        }
+    }
+}
+
+@media screen and (max-width: 575px) {
+    .grid-services {
+        ul {
+            li {
+                h2 {
+                    font-size: 1.25rem;
+                }
+            }
+        }
+    }
+}
