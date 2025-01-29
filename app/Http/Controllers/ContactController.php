@@ -34,7 +34,7 @@ class ContactController
         ]);
 
 
-        Mail::to('assetech.ind@hotmail.com')->send(new ContactFormMail($data));
+        Mail::to('ecomercial@assetech.com.br')->send(new ContactFormMail($data));
 
         return to_route('pages.thanks');
     }
